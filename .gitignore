@@ -1,2 +1,10 @@
 *.xml
 *.iml
+*.log
+*.gen
+*.lock
+*.zip
+*.rss
+*.css
+*.json
+/.metadata/*

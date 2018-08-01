@@ -8,20 +8,19 @@ A Node is defined as:
     }
 */
 
-boolean hasCycle(Node head) {
+boolean hasCycle(Node head){
 
-        if(head == null || head.next == null || head.next.next == null){
+        if(head==null||head.next==null||head.next.next==null){
         return false;
         }
-        Node currentHead = head;
-        Node nextHead= currentHead.next;
-
-        do{
-        if(nextHead.next.equals(currentHead)){
-        return true;
+        Node currentHead=head;
+        Node nextHead=currentHead.next;
+        boolean hasNextNode=false;
+        while(!hasNextNode){
+            if(nextHead.next.equals(currentHead)){
+            return true;
+            }
+            currentHead=nextHead;
+            nextHead=currentHead.next;
         }
-        currentHead = nextHead;
-        nextHead= currentHead.next;
-        }while(nextHead.next != null);
-        return false;
-        }
+            return false;}
